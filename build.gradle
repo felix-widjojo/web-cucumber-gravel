@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'gravel'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.cucumber:cucumber-core:7.18.1'
+    implementation 'io.cucumber:cucumber-junit:7.18.1'
+    implementation 'org.slf4j:slf4j-simple:2.0.6'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.18.1'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.24.0'
+    // https://mvnrepository.com/artifact/io.appium/java-client
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+    //https://search.maven.org/artifact/io.github.bonigarcia/webdrivermanager/
+    implementation group: 'io.appium', name: 'java-client', version: '7.5.1'
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    implementation 'org.postgresql:postgresql:42.2.23'
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql/42.2.23
+    implementation group: 'net.masterthought', name: 'cucumber-reporting', version: '5.8.2'
+    // https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.4.0'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    // for assertion
+    testImplementation group: 'org.testng', name: 'testng', version: '7.3.0'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    // to solve .until() deprecated issue in WebDriverWait
+    implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
+}
+
+test {
+    useJUnitPlatform()
+}
